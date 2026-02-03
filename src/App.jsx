@@ -8,11 +8,13 @@ const countries = [
 ];
 
 export default function App() {
+  const logoUrl = `${import.meta.env.BASE_URL}ed-icon-filled-256.png`;
+
   return (
     <div className="page">
       <div className="card">
         <div className="logo" aria-hidden="true">
-          <img src="/ed-icon-filled-256.png" alt="ed logo" />
+          <img src={logoUrl} alt="ed logo" />
         </div>
         <div className="notice">Log in to continue.</div>
 
