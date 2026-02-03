@@ -39,7 +39,7 @@ export default function App() {
             id="email"
             className="input"
             type="email"
-            defaultValue=""
+            defaultValue="fcarrillo6@gatech.edu"
           />
         </div>
 
