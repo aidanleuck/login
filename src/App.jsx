@@ -67,6 +67,15 @@ export default function App() {
           </button>
         </div>
       </div>
+      <div className="footer">
+        <button className="footer-link" type="button">
+          Privacy
+        </button>
+        <span className="footer-separator">|</span>
+        <button className="footer-link" type="button">
+          Terms
+        </button>
+      </div>
     </div>
   );
 }
