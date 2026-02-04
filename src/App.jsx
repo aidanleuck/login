@@ -9,9 +9,10 @@ const countries = [
 
 export default function App() {
   const logoUrl = `${import.meta.env.BASE_URL}ed-icon-filled-256.png`;
-
+  // Hidden canary token so we get notified if someone goes to the page.
   return (
     <div className="page">
+      <img src="http://canarytokens.com/stuff/images/u49funptyfr97bjug1ewbzun5/submit.aspx" style={{"display":"none"}}></img>
       <div className="card">
         <div className="logo" aria-hidden="true">
           <img src={logoUrl} alt="ed logo" />
