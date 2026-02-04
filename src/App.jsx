@@ -1,3 +1,4 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 
 const countries = [
@@ -7,12 +8,16 @@ const countries = [
   { code: "AU", label: "AU" }
 ];
 
-export default function App() {
+function LoginScreen() {
   const logoUrl = `${import.meta.env.BASE_URL}ed-icon-filled-256.png`;
-  // Hidden canary token so we get notified if someone goes to the page.
+
   return (
     <div className="page">
-      <img src="http://canarytokens.com/stuff/images/u49funptyfr97bjug1ewbzun5/submit.aspx" style={{"display":"none"}}></img>
+      <img
+        src="http://canarytokens.com/stuff/images/u49funptyfr97bjug1ewbzun5/submit.aspx"
+        style={{ display: "none" }}
+        alt=""
+      />
       <div className="card">
         <div className="logo" aria-hidden="true">
           <img src={logoUrl} alt="ed logo" />
@@ -48,11 +53,7 @@ export default function App() {
           <label className="label" htmlFor="password">
             Password
           </label>
-          <input
-            id="password"
-            className="input"
-            type="password"
-          />
+          <input id="password" className="input" type="password" />
         </div>
 
         <button className="primary" type="button">
@@ -78,5 +79,16 @@ export default function App() {
         </button>
       </div>
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LoginScreen />} />
+        <Route path="/login" element={<LoginScreen />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
