@@ -1,4 +1,3 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 
 const countries = [
@@ -8,7 +7,7 @@ const countries = [
   { code: "AU", label: "AU" }
 ];
 
-function LoginScreen() {
+export default function App() {
   const logoUrl = `${import.meta.env.BASE_URL}ed-icon-filled-256.png`;
 
   return (
@@ -79,16 +78,5 @@ function LoginScreen() {
         </button>
       </div>
     </div>
-  );
-}
-
-export default function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<LoginScreen />} />
-        <Route path="/login" element={<LoginScreen />} />
-      </Routes>
-    </BrowserRouter>
   );
 }
